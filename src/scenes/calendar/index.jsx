@@ -14,7 +14,6 @@ import {
 } from "@mui/material";
 import Header from "../../components/Header";
 import { tokens } from "../../theme";
-import { borderRadius } from "@mui/system";
 
 const Calendar = () => {
   const theme = useTheme();
@@ -36,6 +35,7 @@ const Calendar = () => {
       });
     }
   };
+
   const handleEventClick = (selected) => {
     if (
       window.confirm(
@@ -48,13 +48,13 @@ const Calendar = () => {
 
   return (
     <Box m="20px">
-      <Header title="CALENDAR" subtitle="Full Calendar Interative Page" />
+      <Header title="Calendar" subtitle="Full Calendar Interactive Page" />
 
       <Box display="flex" justifyContent="space-between">
         {/* CALENDAR SIDEBAR */}
         <Box
           flex="1 1 20%"
-          backgrouundColor={colors.primary[400]}
+          backgroundColor={colors.primary[400]}
           p="15px"
           borderRadius="4px"
         >
@@ -85,20 +85,21 @@ const Calendar = () => {
             ))}
           </List>
         </Box>
+
         {/* CALENDAR */}
         <Box flex="1 1 100%" ml="15px">
-            <FullCalendar
+          <FullCalendar
             height="75vh"
             plugins={[
-                dayGridPlugin,
-                timeGridPlugin,
-                interactionPlugin,
-                listPlugin
+              dayGridPlugin,
+              timeGridPlugin,
+              interactionPlugin,
+              listPlugin,
             ]}
             headerToolbar={{
-                left: "prev,next today ",
-                center: "title",
-                right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
+              left: "prev,next today",
+              center: "title",
+              right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
             }}
             initialView="dayGridMonth"
             editable={true}
@@ -109,10 +110,18 @@ const Calendar = () => {
             eventClick={handleEventClick}
             eventsSet={(events) => setCurrentEvents(events)}
             initialEvents={[
-                { id: "1234", title: "All-day event", date: "2022-09-14"},
-                { id: "4321", title: "Timed event", date: "2022-09-28"},
+              {
+                id: "12315",
+                title: "All-day event",
+                date: "2022-09-14",
+              },
+              {
+                id: "5123",
+                title: "Timed event",
+                date: "2022-09-28",
+              },
             ]}
-            />
+          />
         </Box>
       </Box>
     </Box>
