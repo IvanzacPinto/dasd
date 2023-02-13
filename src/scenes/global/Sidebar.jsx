@@ -45,7 +45,7 @@ const Sidebar = () => {
     <Box
       sx={{
         "& .pro-sidebar-inner": {
-          background: `${colors.primary[400]} !important`,
+          background: `${colors.primary[900]} !important`,
         },
         "& .pro-icon-wrapper": {
           backgroundColor: "transparent !important",
@@ -82,7 +82,7 @@ const Sidebar = () => {
                 <Typography variant="h3" color={colors.grey[100]}>
                   <span
                     style={{
-                      color: colors.greenAccent[500],
+                      color: colors.blueAccent[100],
                       fontWeight: "bold",
                     }}
                   >
@@ -117,7 +117,7 @@ const Sidebar = () => {
                 >
                   Ivan Pinto
                 </Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]}>
+                <Typography variant="h5" color={colors.greenAccent[100]}>
                   Graphic Design
                 </Typography>
               </Box>

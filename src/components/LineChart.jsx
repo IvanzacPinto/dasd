@@ -39,7 +39,7 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
         },
         tooltip: {
           container: {
-            color: colors.primary[500],
+            color: colors.primary[100],
           },
         },
       }}
@@ -78,6 +78,7 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
       }}
       enableGridX={false}
       enableGridY={false}
+      cxx={{ scheme: "category10" }}
       pointSize={8}
       pointColor={{ theme: "background" }}
       pointBorderWidth={2}
